@@ -1,0 +1,118 @@
+<!DOCTYPE html><HTML>
+
+  <HEAD>
+    <meta charset="UTF-8"/>
+    <TITLE>Formulario</TITLE>
+
+    <!--Ficheros añadidos-->
+    <link rel="stylesheet" href="p1.css">
+    <script src="p1.js"></script>
+
+    <meta name="author" content="Hugo Prado Sueiro">
+  </HEAD>
+
+  <BODY>
+    <fieldset><legend>Formulario para inscribirse a películas</legend>
+    <br>
+    <form name="formulario" action="p1.php" id="formulario">
+    <img class="mike" src="https://plantillasdememes.com/img/plantillas/mike-wazowski-con-cara-de-sullivan01578859264.jpg" alt="Mike Wazowski"/>
+
+    <!--text=alfa-num, email=detecta @, radio=una única respuesta, checkbox=casillas marcables-->
+
+      <!--Nombre-->
+      <p>Nombre y Apellido:</p>
+      <input class="campo" type="text" id="name" name="cname" pattern="([A-Za-zÀ-ÿñÑ]{3,}) ([A-Za-zÀ-ÿñÑ]{3,})" placeholder="Indique su nombre y apellido" size="30">
+
+      <!--Login-->
+      <p>Login:</p>
+      <input class="campo" type="text" id="login" name="clogin" pattern="[A-Za-z0-9ñ]{4,8}" placeholder="De 4 a 8 caracteres" size="30">
+
+      <!--Contraseña-->
+      <p>Contraseña:</p>
+      <input type="password" id="passwd" name="cpasswd" size="30" placeholder="De 6 a 12 caracteres">
+
+      <!--Teléfono-->
+      <p>Teléfono:</p>
+      <input class="campo" type="text" id="tlph" name="ctlph" placeholder="Indique su teléfono" size="30">
+
+
+      <!--Correo Electrónico-->
+      <p>Correo electrónico:</p>
+      <input class="campo" type="email" id="email" name="cemail" placeholder="Indique su email" size="30">
+
+      <!--Edad-->
+      <p>Edad:</p>
+        <input class="caja" type="radio" name="cage" value="menos de 25 años">
+        <label>menos de 25 años</label>
+        <br>
+        <input class="caja" type="radio" name="cage" value="25 a 40 años">
+        <label>25 - 40 años</label>
+        <br>
+        <input class="caja" type="radio" name="cage" value="40 a 60 años">
+        <label>40 - 60 años</label>
+        <br>
+        <input class="caja" type="radio" name="cage" value="más de 60 años">
+        <label>más de 60</label>
+
+      <!--Gustos-->
+      <p>Géneros favoritos:</p>
+
+        <input class="caja" type="checkbox" name="cgenre[]" value="Western">
+        <label>Western</label>
+        <br>
+        <input class="caja" type="checkbox" name="cgenre[]" value="Comedia">
+        <label>Comedia</label>
+        <br>
+        <input class="caja" type="checkbox" name="cgenre[]" value="Acción">
+        <label>Acción</label>
+        <br>
+        <input class="caja" type="checkbox" name="cgenre[]" value="Romántica">
+        <label>Romántica</label>
+        <br>
+        <input class="caja" type="checkbox" name="cgenre[]" value="Ficción">
+        <label>Ficción</label>
+        <br>
+        <input class="caja" type="checkbox" onclick="Checkboxes(formulario)">
+        <label>Marcar/Desmarcar todo</label>
+
+      <!--Comentarios-->
+      <p>Comentarios:</p>
+      <input class="campo" type="text" id="comment" name="ccomment" placeholder="Comentarios adicionales" size="30">
+
+      <!--Proveedor de Internet-->
+      <p>Proveedor de Internet:</p>
+      <select name="proveedor">
+        <option>Movistar</option>
+        <option>Vodafone</option>
+        <option>Orange</option>
+        <option>R</option>
+      </select>
+      <br>
+
+      <!--Método-->
+      <p>Método:</p>
+        <input class="caja" type="radio" name="cmethod" onclick="changeMethodGET()">
+        <label>GET</label>
+        <br>
+        <input class="caja" type="radio" name="cmethod" onclick="changeMethodPOSTURL()">
+        <label>POST & URLencoded</label>
+        <br>
+        <input class="caja" type="radio" name="cmethod" onclick="changeMethodPOSTmultipart()">
+        <label>POST & multipart</label>
+        <br><br>
+
+      <!--Hidden-->
+      <input id="hidden" name="cbrowser" type="hidden">
+
+      <!--Borrar formulario-->
+      <input type="reset"  id="goma" value="Borrar respuestas">
+
+      <!--Enviar formulario-->
+      <input type="submit" id="envio" name="submit" value="Empezar a recibir peliculones" onclick="return Comprobar()">
+      <br>
+    </form>
+  <div id="copy">&copy;Hugo Prado Sueiro</div>
+  <img src="https://static.dw.com/image/59364807_401.jpg" alt="James Bond" class="james" style="width:233px; height:133px;"/>
+  </fieldset>
+  </BODY>
+</HTML>

@@ -1,0 +1,67 @@
+body{
+  background:linear-gradient(to bottom, grey,white,grey,white,grey);
+  margin: auto 15% auto 15%
+}
+
+p{
+  font-weight: bolder;
+  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
+
+.campo{
+  background-color: lightblue;
+  color: purple;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.caja{
+  margin-left: 15;
+}
+
+legend{
+  margin-left: 50;
+  font-size: 40px;
+  text-shadow: 2px 2px 2px red;
+}
+
+.mike{
+  border: 4px solid black;
+  float: right;
+  margin-top: 2000;
+  width:200px;
+  height:250px;
+}
+
+.james{
+  display: block;
+  margin: 0 auto;
+  border:4px solid grey;
+}
+
+#passwd{
+  background-color: pink;
+  color: green;
+  border: 2px solid black;
+  text-align: center;
+}
+
+#copy{
+  text-align: center;
+  font-style: oblique;
+}
+
+#envio{
+  display: block;
+  margin: 0 auto;
+  background-color: purple;
+  color: white;
+  border: 3px solid yellow;
+}
+
+#goma{
+  margin: 0 auto;
+  background-color: blue;
+  color: white;
+  border: 3px solid green;
+}
